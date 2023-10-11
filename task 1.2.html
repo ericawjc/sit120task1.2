@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap 5 Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+<div class="container-fluid p-5 bg-primary text-white text-center">
+  <h1>SIT120 Task 1.2</h1>
+  <p>JavaScript Concepts</p> 
+</div>
+  
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-sm-4">
+      <h3>Array Methods</h3>
+      <p>1. toString()</p>
+      <p id="a1s"></p>
+      <p id="a1p"></p>
+      <p>2. push()</p>
+      <p id="a2s"></p>
+      <p id="a2p"></p>
+      <p>3. slice()</p>
+      <p id="a3s"></p>
+      <p>4. unshift()</p>
+      <p id="a4s"></p>
+      <p>5. concat()</p>
+      <p id="a5"></p>
+    </div>
+    <div class="col-sm-4">
+      <h3>Date Methods</h3>
+      <p>1. new Date()</p>
+      <p id="d1"></p>
+      <p>2. toString()</p>
+      <p id="d2"></p>
+      <p>3. toDateString()</p>
+      <p id="d3"></p>
+      <p>4. toUTCString()</p>
+      <p id="d4"></p>
+      <p>5. toISOString()</p>
+      <p id="d5"></p>
+    </div>
+    <div class="col-sm-4">
+      <h3>Function Methods</h3>
+      <p>1. Multiplication</p>
+      <p id="f1"></p>
+      <p>2. Converting Fahrenheit to Celsius</p>
+      <p id="f2"></p>     
+    </div>
+  </div>
+</div>
+
+<script>
+  const shopping = ["Bread", "Greens", "Fruit", "Milk" , "Meat"];
+  document.getElementById("a1s").innerHTML = shopping.toString();
+  shopping.push("Eggs");
+  document.getElementById("a2s").innerHTML = shopping;
+  const citrus = shopping.slice(2);
+  document.getElementById("a3s").innerHTML = shopping + "<br><br>" + citrus;
+  citrus.unshift("Tissues");
+  document.getElementById("a4s").innerHTML = citrus;
+  </script>
+
+<script>
+  const price = ["$2", "$3", "$3", "$5" , "$11"];
+  document.getElementById("a1p").innerHTML = price.toString();
+  price.push("$5");
+  document.getElementById("a2p").innerHTML = price;
+  </script>
+
+<script>
+  const shopping2 = ["Bread", "Greens", "Fruit", "Milk" , "Meat"];
+  const price2 = ["$2", "$3", "$3", "$5" , "$11"];
+  const list = shopping2.concat(price2);
+  
+  document.getElementById("a5").innerHTML = list;
+  </script>
+
+<script>
+  const d1 = new Date();
+  document.getElementById("d1").innerHTML = d1;
+  </script>
+
+<script>
+  const d2 = new Date();
+  document.getElementById("d2").innerHTML = d2.toString();
+  </script>
+
+<script>
+  const d3 = new Date();
+  document.getElementById("d3").innerHTML = d3.toDateString();
+  </script>
+
+<script>
+  const d4 = new Date();
+  document.getElementById("d4").innerHTML = d4.toUTCString();
+  </script>
+
+<script>
+  const d5 = new Date();
+  document.getElementById("d5").innerHTML = d5.toISOString();
+  </script>
+
+<script>
+  function myFunction(p1, p2) {
+    return p1 * p2;
+  }
+  
+  let result = myFunction(60, 310);
+  document.getElementById("f1").innerHTML = result;
+  </script>
+
+<script>
+  function toCelsius(f) {
+    return (5/9) * (f-32);
+  }
+  
+  let value = toCelsius(106);
+  document.getElementById("f2").innerHTML = value;
+  </script>
+
+</body>
+</html>
